@@ -1,0 +1,29 @@
+CREATE TABLE days (
+    day INT
+);
+
+INSERT INTO days (day) VALUES
+(1),
+(2),
+(3),
+(4),
+(5),
+(6),
+(7),
+(8),
+(9),
+(10);
+SELECT 
+    day,
+    CASE 
+        WHEN day = 1 THEN 'Sunday'
+        WHEN day = 2 THEN 'Monday'
+        WHEN day = 3 THEN 'Tuesday'
+        WHEN day = 4 THEN 'Wednesday'
+        WHEN day = 5 THEN 'Thursday'
+        WHEN day = 6 THEN 'Friday'
+        WHEN day = 7 THEN 'Satarday'
+        
+        ELSE NULL
+    END AS day_name
+FROM days;
